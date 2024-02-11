@@ -69,7 +69,7 @@ $(document).ready(function () {
 
 
     // URL of the JSON file
-    const statsURL = 'https://api.visitorbadge.io/api/status?path=https%3A%2F%2Fgithub.com%2Fshubhankarchahar%2Fshubhankarchahar'
+    const statsURL = 'https://api.visitorbadge.io/api/status?path=https%3A%2F%2Fgithub.com%2Fyaminisingh-5%2Fyaminisingh-5'
 
     // Fetch visitor count from api
     fetch(statsURL)
