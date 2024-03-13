@@ -1,0 +1,286 @@
+.nav li:hover a {
+    color: #16a085;  
+}
+
+.nav li:hover a .icon-fill::before {
+    box-shadow: inset 0 0 0 3.75em #16a085; 
+}
+
+.sidebar .nav li a  {
+    display: grid;
+    padding-left: 0.3em;
+    grid-template-columns: 0.7fr 5fr;
+    align-items: center;
+    justify-content: start;
+    
+}
+.icon {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 1.875em; 
+    height: 1.875em; 
+    border-radius: 1.875em; 
+    margin-right: 0.3em;
+    overflow: hidden;
+}
+.icon::before, .icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 1.875em;
+}.icon i {
+    position: relative;
+    color: #fff;
+    font-size: 1.0625em; 
+    margin-top: 0.4375em;
+    transition: all 0.25s ease;
+}
+
+.icon-fill::before {
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 0.0625em #16a085; 
+}
+
+.icon-fill:hover::before {
+    box-shadow: inset 0 0 0 3.75em #16a085; 
+}
+
+.icon-enter::after {
+    box-shadow: inset 0 0 0 0.0625em #eb9532; 
+}
+
+.icon-enter::before {
+    border-radius: 0;
+    margin-left: -6.25em; 
+    box-shadow: inset 0 0 0 3.75em #eb9532; 
+}
+
+.icon-enter:hover::before {
+    margin-left: 0;
+}
+
+.icon-expand::after {
+    box-shadow: inset 0 0 0 0.0625em #c82647; 
+}
+
+.icon-expand::before {
+    background: #c82647;
+    box-shadow: inset 0 0 0 3.75em #2d2c3e; 
+}
+
+.icon-expand:hover::before {
+    box-shadow: inset 0 2.1875em 0 0 #8cc63f, inset 0 -2.1875em 0 0 #8cc63f; 
+}
+
+.icon-collapse::before {
+    border-radius: 0;
+}
+
+.icon-collapse:hover::before {
+    box-shadow: inset 0 1.875em 0 0 #8cc63f, inset 0 -1.875em 0 0 #8cc63f; 
+}
+
+.icon-collapse::after {
+    box-shadow: inset 0 0 0 0.0625em #8cc63f;
+}
+
+.icon-rotate {
+    box-shadow: inset 0 0 0 0.0625em #7e3661;
+}
+
+.icon-rotate::after, .icon-rotate::before {
+    border: 0px solid transparent;
+}
+
+.icon-rotate:hover::before {
+    transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
+    border-width: 3.75em;
+    border-top-color: #7e3661;
+}
+
+.icon-rotate:hover::after {
+    transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
+    border-width: 3.75em; 
+    border-left-color: #7e3661;
+}
+
+.icon-rotate:hover {
+    transition: background 0.001s ease 0.3s;
+    background: #7e3661;
+}
+
+.icon-rotate i {
+    z-index: 1;
+}
+
+.basline{
+    justify-self: baseline;
+}
+
+
+.icon-fill::before,
+.icon-fill::after,
+.icon-enter::before,
+.icon-enter::after,
+.icon-expand::before,
+.icon-expand::after,
+.icon-collapse::before,
+.icon-collapse::after,
+.icon-rotate::before,
+.icon-rotate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 1.875em;
+}
+
+
+.nav li.active a .icon-fill::before,
+.nav li:hover a .icon-fill::before {
+    box-shadow: inset 0 0 0 3.75em #16a085;
+}
+
+
+.nav li.active a .icon-enter::before,
+.nav li:hover a .icon-enter::before,
+.nav li.active a .icon-enter::after,
+.nav li:hover a .icon-enter::after {
+    box-shadow: inset 0 0 0 3.75em #eb9532;
+}
+
+.nav li.active a .icon-expand::before,
+.nav li:hover a .icon-expand::before,
+.nav li.active a .icon-expand::after,
+.nav li:hover a .icon-expand::after {
+    box-shadow: inset 0 0 0 3.75em #c82647;
+}
+
+.nav li.active a .icon-collapse::before,
+.nav li:hover a .icon-collapse::before,
+.nav li.active a .icon-collapse::after,
+.nav li:hover a .icon-collapse::after {
+    box-shadow: inset 0 0 0 3.75em #8cc63f;
+}
+
+.nav li.active a .icon-rotate::before,
+.nav li:hover a .icon-rotate::before,
+.nav li.active a .icon-rotate::after,
+.nav li:hover a .icon-rotate::after {
+    box-shadow: inset 0 0 0 3.75em #7e3661;
+}
+
+.list-unstiled li {
+    opacity:1;
+    transition: opacity 0.2s ease-in-out
+}
+
+.list-unstiled li:hover {
+    opacity: 0.5;
+}
+
+.line-1{
+    text-align: start;
+    position: relative;
+    top: 0.6em;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 1em;
+    width: 20em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 850ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 9em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+.gradient-border {
+font-family: Lato, sans-serif;
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.user-pic {
+    --s: 20rem;
+    --b: 0.3rem; 
+    --c: #ae3ec9;
+    --cb: #e9ecef;
+    --f: 1;
+
+    width: var(--s);
+    aspect-ratio: 1;
+    padding-top: calc(var(--s) / 5);
+    cursor: pointer;
+    border-radius: 0 0 50%;
+    --_g: 50%/calc(100%/var(--f)) 100% no-repeat content-box;
+    --_o: calc((1/var(--f) - 1)*var(--s)/2 - var(--b));
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--_o);
+    background:
+        radial-gradient(
+        circle closest-side,
+        var(--cb) calc(99% - var(--b)),var(--c) calc(100% - var(--b)) 99%,#0000
+       ) var(--_g);
+    -webkit-mask:
+        linear-gradient(#000 0 0) no-repeat
+       50% calc(1px - var(--_o)) / calc(100%/var(--f) - 2*var(--b) - 2px) 50%,
+        radial-gradient(circle closest-side,#000 99%,#0000) var(--_g);
+    transform: scale(var(--f));
+    transition: .5s;
+}
+
+.user-pic:hover {
+    --f: 1.1;
+}
+
+
+ 

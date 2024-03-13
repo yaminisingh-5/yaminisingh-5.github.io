@@ -12,9 +12,17 @@ Extra extra large xxl ?1400px
 @media only screen and (min-width: 768px) {
     .sidebarWrapper {
         position: fixed;
+        
         /*height: 100vh;*/
     }
 
+
+    
+    .user-pic {
+        --s:17rem !important;
+           object-fit: cover;
+         
+       }
     .mobileOnly {
         display: none;
     }
@@ -29,7 +37,7 @@ Extra extra large xxl ?1400px
     }
 
     .badgeCard {
-        width: 10em;
+        width: 11em;
         margin-bottom: .5em;
     }
 
@@ -76,6 +84,7 @@ Extra extra large xxl ?1400px
     .container {
         width: 1070px;
     }
+    
 
     .mainContentWrapper {
         padding: 0;
@@ -122,9 +131,6 @@ Extra extra large xxl ?1400px
         padding: 5px;
     }
 
-    /*    .visitorCount {
-        width: 105%;
-    }*/
 
     .downloadResume {
         padding: .2em 1.5em;
@@ -159,25 +165,50 @@ Extra extra large xxl ?1400px
     }
 
     .downloadResume {
+        cursor: pointer;
         font-size: 1em;
         padding: .5em 2.5em;
     }
 
     .visitorCount {
         /*width: 50%;*/
+     
+    }
+    .col-xs-9 {
+        width: 100%;
+        text-align: start;
+        padding: 0.2em;
+
     }
 
+    .cert-img {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .badge-img {
+        width: 100%;
+        padding: 5px;
+    }
     .section-title h2 i {
         font-size: 1.2em;
     }
 
     .section-title h2 {
-        font-size: 2.4em;
+        font-size: 1.4em;
     }
 
     .mainContentWrapper {
         padding: 0;
         margin-left: 0;
+    }
+
+    .col-xs-2{
+         padding: 0;
+    }
+
+    .col-xs-3{
+        padding: 0;
     }
 
     .resumeWrapper {
@@ -186,9 +217,16 @@ Extra extra large xxl ?1400px
     }
 
     .user-pic {
-        /*width: 35%;
-        margin-bottom: 8px;*/
+     --s:13rem !important;
+        object-fit: cover;
+      
     }
+
+    .btn-downloadResume{
+        margin-left: 3em;
+        padding: 0.5em 1.5em;
+    }
+
 
     .imgDiv {
         text-align: left;
@@ -207,6 +245,7 @@ Extra extra large xxl ?1400px
 
     .menu {
         position: relative;
+        height: 6em;
     }
 
     .nav {
@@ -286,7 +325,16 @@ Extra extra large xxl ?1400px
     }
 
     .line {
-        width: 70%;
+        display: none;
+    }
+
+    .anim-typewriter{
+        position: relative;
+        top: 0.8em;
+    }
+
+    .pull-right{
+        padding-right: 0.2em;
     }
 
     .resume-box {
@@ -296,10 +344,22 @@ Extra extra large xxl ?1400px
     }
 
     .badgeCard {
-        width: 7em;
+        width: 8.5em;
         margin-bottom: .5em;
         box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
     }
+
+    #education .content-box .row .col-xs-9 {
+       padding: 0;
+      
+    }
+
+
+
+    #education .content-box .row .col-xs-9 span {
+       display: none;
+     }
+      
 
     .certCard {
         border: 0;
@@ -320,6 +380,9 @@ Extra extra large xxl ?1400px
 
     .left-social {
         padding: 10px 0;
+        gap: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
         .left-social a {
@@ -330,5 +393,32 @@ Extra extra large xxl ?1400px
                 border-radius: 20%;
                 padding: 5px;
             }
+
+}
+
+
+@media screen and (min-width: 765px) and (max-width: 1018px) {
+    .container{
+        width: 850px;
+        margin-left: 1em;
+        padding-left: 1em;
+    }
+    .user-pic {
+        --s:13rem !important;
+           object-fit: cover;
+         
+       }
+    .sidebarWrapper{
+        width: 11em;
+    }
+}
+
+
+
+
+@media screen and (min-width: 2415px) {
+ .sidebarWrapper{
+    width: 12%;
+ }
 
 }
