@@ -94,14 +94,17 @@
                 />
               </div>
               <div class="col-xs-8 row mobileOnly pull-right"></div>
-              <button
-                class="btn btn-downloadResume"
-                type="submit"
-                onclick="window.open('/Yamini AZ24.pdf')"
-              >
-                <i class="fa fa-download"></i>
-                <a href="/Yamini AZ24.pdf">Resume</a>
-              </button>
+              <div class="watermark-ctr">
+                <a href="">
+                  <button
+                    class="generate-button"
+                    type="submit"
+                    onclick="window.open('/Yamini AZ24.pdf')"
+                  >
+                    <span> <i class="fa fa-download"></i> Resume</span>
+                  </button>
+                </a>
+              </div>
 
               <ul class="nav">
                 <li class="active">
@@ -196,7 +199,39 @@
                   style="color: var(--fontColor1)"
                   class="line-1 anim-typewriter"
                 >
-                  Hello! I am <strong>Yamini</strong> <br />
+                  Hello! I am
+                  <strong>
+                    <svg
+                      id="stroke"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="0"
+                      height="0"
+                    >
+                      <defs>
+                        <path
+                          id="line"
+                          d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          vector-effect="non-scaling-stroke"
+                        />
+                      </defs>
+                    </svg>
+
+                    <span class="animate-container">
+                      <a class="animate-btn"
+                        >Yamini
+                        <svg class="button-stroke" viewBox="0 0 154 13">
+                          <use href="#line"></use>
+                        </svg>
+                        <svg class="button-stroke" viewBox="0 0 154 13">
+                          <use href="#line"></use>
+                        </svg>
+                      </a>
+                    </span>
+                  </strong>
+                  <br />
                 </h1>
                 <h2 class="font-900">
                   Senior DevOps Engineer/ Architect| Azure| Data | Manager

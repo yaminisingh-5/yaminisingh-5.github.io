@@ -284,3 +284,185 @@ font-family: Lato, sans-serif;
 
 
  
+.animate-btn {
+  display: inline-block;
+  min-width: 154px;
+  text-decoration: none;
+  right: 1.2em;
+  position: relative;
+  text-align: center;
+}
+.animate-btn:hover .button-stroke:nth-child(2) {
+  stroke-dashoffset: 0;
+}
+.button-stroke {
+  display: block;
+  width: calc(100% - 40px);
+  height: 20px;
+  stroke: #ffea20;
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  stroke-width: 4;
+}
+.button-stroke:nth-child(2) {
+  stroke-dasharray: 650px;
+  stroke-dashoffset: 650px;
+  stroke: #11171a;
+  stroke-width: 5;
+  transition: stroke-dashoffset 800ms ease-out;
+}
+
+/* ------------------------ Watermark (Please Ignore) ----------------------- */
+.watermark-ctr {
+  --clr-button-bg: #0A1930; 
+  margin-bottom: 0.5em;
+  --clr-button: 72, 39, 236;
+  position: relative;
+  left: 1.7em;
+  top: 0.4em;
+  z-index: 1000;
+}
+.watermark-ctr a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  justify-content: center;
+  left: -2em;
+  display: flex;
+}
+.generate-button {
+  left: 0.2em;
+  --generate-button-star-1-opacity: 0.25;
+  --generate-button-star-1-scale: 1;
+  --generate-button-star-2-opacity: 1;
+  --generate-button-star-2-scale: 1;
+  --generate-button-star-3-opacity: 0.5;
+  --generate-button-star-3-scale: 1;
+  --generate-button-dots-opacity: 0;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 0.5em 2.5em 0.5em 2.5em;
+  border-radius: 29px;
+  margin: 0;
+  background-color: var(--clr-button-bg);
+  color: var(--clr-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+  transform: scale(var(--generate-button-scale, 1)) translateZ(0);
+  box-shadow: 0px 0px 120px var(--generate-button-shadow-wide, transparent),
+    0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px
+      var(--generate-button-shadow-inset, rgba(255, 255, 255, 0.04)),
+    0 0 0 var(--generate-button-shadow-outline, 0px)
+      rgba(var(--clr-button), 0.4);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+.generate-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20%;
+  height: 20px;
+  left: 20%;
+  bottom: -10px;
+  background: rgba(204, 204, 204, 0.4);
+  filter: blur(12.5px);
+  z-index: 2;
+  clip-path: inset(-200% -30% 10px -30% round 29px);
+  opacity: 0;
+  transition: opacity 0.4s;
+  transform: translateZ(0);
+}
+.generate-button span {
+  position: relative;
+  z-index: 1;
+  font-family: "Poppins", Arial;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  display: block;
+  user-select: none;
+}
+.generate-button .stroke {
+  mix-blend-mode: hard-light;
+}
+.generate-button .stroke svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 0.75px;
+ 
+  stroke-dasharray: 1.5 14;
+  stroke-dashoffset: 22;
+  opacity: 0;
+}
+.generate-button .stroke svg:nth-child(2) {
+  stroke-width: 1px;
+  stroke-opacity: 0.5;
+  filter: blur(3px);
+}
+
+.generate-button svg.icon {
+  width: 18px;
+  height: 20px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.generate-button svg.icon path:nth-child(1) {
+  opacity: var(--generate-button-star-1-opacity);
+  transform: scale(var(--generate-button-star-1-scale)) translateZ(0);
+  transform-origin: 25% 14.58%;
+}
+.generate-button svg.icon path:nth-child(2) {
+  opacity: var(--generate-button-star-2-opacity);
+  transform: scale(var(--generate-button-star-2-scale)) translateZ(0);
+  transform-origin: 60.42% 50%;
+}
+.generate-button svg.icon path:nth-child(3) {
+  opacity: var(--generate-button-star-3-opacity);
+  transform: scale(var(--generate-button-star-3-scale)) translateZ(0);
+  transform-origin: 25% 85.42%;
+}
+.generate-button:hover {
+  --generate-button-scale: 1.01;
+  --generate-button-shadow-wide: rgba(var(--clr-button), 0.4);
+  --generate-button-shadow-inset: rgba(255, 255, 255, 0.35);
+  --generate-button-shadow-outline: 3px;
+  color: var(--clr-text);
+  background-color: rgba(var(--clr-button));
+}
+.generate-button:hover .stroke svg {
+  animation: stroke 2s linear infinite;
+}
+.generate-button:hover:before {
+  opacity: 1;
+}
+.generate-button:hover span:before {
+  opacity: 0;
+}
+.generate-button:hover:active {
+  --generate-button-scale: 1.05;
+}
+@keyframes stroke {
+  0% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    stroke-dashoffset: 6;
+    opacity: 0;
+  }
+}

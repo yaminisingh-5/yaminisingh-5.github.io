@@ -16,8 +16,10 @@ Extra extra large xxl ?1400px
         /*height: 100vh;*/
     }
 
-
-    
+    .generate-button {
+    left: -1.5em ;
+    }
+  
     .user-pic {
         --s:17rem !important;
            object-fit: cover;
@@ -80,6 +82,12 @@ Extra extra large xxl ?1400px
     /*body {
         background-color: #fff;
     }*/
+    .watermark-ctr {
+        right: 3em;
+    }
+
+
+  
 
     .container {
         width: 1070px;
@@ -120,6 +128,10 @@ Extra extra large xxl ?1400px
         width: 65%;
     }
 
+    .generate-button {
+        left: 5.5em ;
+    }
+
     .container {
         width: 1570px;
     }
@@ -129,6 +141,15 @@ Extra extra large xxl ?1400px
 @media screen and (max-width: 991px) {
     .company-pic {
         padding: 5px;
+    }
+
+
+    
+    .generate-button {
+        right: 1.1em;
+    }
+    .watermark-ctr{
+        right: 3em;
     }
 
 
@@ -198,6 +219,11 @@ Extra extra large xxl ?1400px
         font-size: 1.4em;
     }
 
+    .watermark-ctr{
+        padding: 0;
+     }
+ 
+
     .mainContentWrapper {
         padding: 0;
         margin-left: 0;
@@ -262,6 +288,19 @@ Extra extra large xxl ?1400px
         z-index: 997;
     }
 
+    .generate-button {
+        padding: 0 !important;
+        width: 10em;
+        height: 3em;
+        left: 6em !important;
+        top: 0.4em;
+    }
+
+
+    .watermark-ctr a {
+        width: 50%;
+    }
+
     .show-nav {
         opacity: 0.95;
         transform: translateY(0px);
@@ -324,7 +363,9 @@ Extra extra large xxl ?1400px
         margin-left: 0;
     }
 
-
+  .show-nav{
+    z-index: 1000000;
+}
 
     .line {
         display: none;
@@ -356,7 +397,18 @@ Extra extra large xxl ?1400px
       
     }
 
-
+    .anim-typewriter{
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+                   blinkTextCursor 850ms steps(44) infinite normal;
+      }
+      @keyframes typewriter{
+        from{width: 0;}
+        to{width: 18em;}
+      }
+      @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+      }
 
     #education .content-box .row .col-xs-9 span {
        display: none;
@@ -378,6 +430,17 @@ Extra extra large xxl ?1400px
         border-radius: 10px;
         width: 4.5em;
         padding: 5px;
+    }
+    .generate-button {
+        padding: 0 !important;
+        width: 7em;
+        height: 3em;
+        left: 3.5em !important;
+        top: 0.4em;
+    }
+
+    .watermark-ctr a {
+        width: 50%;
     }
 
     .left-social {
@@ -408,8 +471,12 @@ Extra extra large xxl ?1400px
     .user-pic {
         --s:13rem !important;
            object-fit: cover;
-         
+    
        }
+
+       .generate-button {
+       left: -1.5em ;
+    }
     .sidebarWrapper{
         width: 11em;
     }
@@ -422,5 +489,9 @@ Extra extra large xxl ?1400px
  .sidebarWrapper{
     width: 12%;
  }
+
+ .generate-button {
+    left:  3em ;
+}
 
 }
