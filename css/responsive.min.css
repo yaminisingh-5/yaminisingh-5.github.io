@@ -221,6 +221,7 @@ Extra extra large xxl ?1400px
 
     .watermark-ctr{
         padding: 0;
+        width: 95%;
      }
  
 
@@ -378,6 +379,10 @@ Extra extra large xxl ?1400px
 
     .pull-right{
         padding-right: 0.2em;
+    }
+
+    .text-left{
+        align-items: center;
     }
 
     .resume-box {
